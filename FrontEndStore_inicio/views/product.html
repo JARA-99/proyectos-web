@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>FrontEnd Store</title>
+		<!--? Stylesheets  -->
+		<link
+			rel="stylesheet"
+			href="../styles/normalize.css" />
+		<link
+			rel="stylesheet"
+			href="../styles/styles.css" />
+
+		<!--? Fonts -->
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<header class="header">
+			<a href="../index.html">
+				<img
+					class="header__logo"
+					src="../assets/img/logo.png"
+					alt="Logo de la Empresa" />
+			</a>
+		</header>
+
+		<nav class="navigation">
+			<a
+				class="navigation__link navigation__link--active"
+				href="../index.html"
+				>Tienda</a
+			>
+			<a
+				class="navigation__link"
+				href="../views/about-us.html"
+				>Nosotros</a
+			>
+		</nav>
+
+		<main class="container">
+			<h1>React JS</h1>
+
+			<div class="shirt">
+				<img
+					src="../assets/img/3.jpg"
+					alt=""
+					class="shirt__img" />
+				<div class="shirt__content">
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima,
+						eligendi cum. Eum esse eaque earum beatae dignissimos, est pariatur,
+						consequatur sint, laudantium quidem ullam in non. Ut, est quae!
+						Autem enim vero animi ipsum, velit eos culpa odio magnam iste
+						minima, consequatur exercitationem, non aliquam necessitatibus? Eos,
+						enim cupiditate. Eum!
+					</p>
+					<form class="product-form">
+						<select class="product-form__input">
+							<option
+								disabled
+								selected>
+								-- Seleccionar Talla --
+							</option>
+							<option value="">Chica</option>
+							<option value="">Mediana</option>
+							<option value="">Grande</option>
+						</select>
+
+						<input
+							class="product-form__input"
+							type="number"
+							placeholder="Número de télefono"
+							min="1" />
+
+						<button
+							type="submit"
+							class="product-form__submit">
+							Agregar al Carrito
+						</button>
+					</form>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<p class="footer__text">
+				ForntEntd Store - Todos los derechos Reservados 2023.
+			</p>
+		</footer>
+	</body>
+</html>

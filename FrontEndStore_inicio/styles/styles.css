@@ -1,12 +1,12 @@
 :root {
 	--primary: #9c27b0;
 	--darkPrimary: #89119d;
-	--secondary: #ffce00;
-	--darkSecondary: rgb(233, 287, 2);
+	--secondary: rgb(233, 287, 2);
+	--darkSecondary: #ffce00;
 	--white: #fff;
 	--black: #000;
 
-	--principalFont: 'Staatliches ', cursive;
+	--principalFont: 'Staatliches', cursive;
 }
 
 /*! Globales */
@@ -39,7 +39,7 @@ a {
 }
 
 img {
-	width: 100%;
+	max-width: 100%;
 }
 
 .container {
@@ -65,4 +65,231 @@ h2 {
 
 h3 {
 	font-size: 2.4rem;
+}
+
+/*? HEADER */
+
+.header {
+	display: flex;
+	justify-content: center;
+}
+
+.header__logo {
+	margin: 3rem 0;
+}
+
+/*? FOOTER */
+
+.footer {
+	background-color: var(--darkPrimary);
+	padding: 1rem 0;
+	margin-top: 2rem;
+}
+
+.footer__text {
+	font-family: var(--principalFont);
+	text-align: center;
+	font-size: 2.2rem;
+}
+
+/*? NAVIGATION */
+
+.navigation {
+	background-color: var(--darkPrimary);
+	padding: 1rem 0;
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.navigation__link {
+	font-family: var(--principalFont);
+	color: var(--white);
+	font-size: 3rem;
+}
+
+.navigation__link:last-of-type {
+	margin-right: 0;
+}
+
+.navigation__link:hover {
+	color: var(--secondary);
+}
+
+.navigation__link--active {
+	color: var(--secondary);
+}
+
+/*? GRID */
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+}
+
+@media (min-width: 768px) {
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/*? PRODUCTS */
+
+.product {
+	background-color: var(--darkPrimary);
+	padding: 1rem;
+}
+
+.product__img {
+	width: 100%;
+}
+
+.product__name {
+	font-size: 4rem;
+}
+
+.product__price {
+	font-size: 2.8rem;
+	color: var(--secondary);
+}
+
+.product__name,
+.product__price {
+	font-family: var(--principalFont);
+	margin: 1rem 0;
+	text-align: center;
+	line-height: 1.2;
+}
+
+/*? GRAFICS */
+
+.grafic {
+	min-height: 30rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	grid-column: 1 / 3;
+}
+
+.grafic--shirts {
+	background-image: url('../assets/img/grafico1.jpg');
+	grid-row: 2 / 3;
+}
+
+.grafic--node {
+	background-image: url('../assets/img/grafico2.jpg');
+	grid-row: 8 / 9;
+}
+
+@media (min-width: 768px) {
+	.grafic--node {
+		grid-row: 5 / 6;
+		grid-column: 2 / 4;
+	}
+}
+
+/*? US  */
+
+.us {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	gap: 2rem;
+}
+
+@media (min-width: 768px) {
+	.us {
+		grid-template-columns: repeat(2, 2fr);
+		gap: 2rem;
+	}
+}
+
+.us__img {
+	width: 100%;
+	grid-column: 1 / 3;
+	grid-row: 1 / 2;
+}
+
+.us__text {
+	width: 100%;
+	grid-column: 1 / 3;
+	grid-row: 2/3;
+	padding: 1rem;
+}
+
+@media (min-width: 768px) {
+	.us__img {
+		grid-column: 2 / 3;
+	}
+	.us__text {
+		width: 100%;
+		grid-column: 1 / 2;
+		grid-row: 1/2;
+	}
+}
+
+/*? BLOCKS */
+
+.blocks {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+@media (min-width: 768px) {
+	.blocks {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.block {
+	text-align: center;
+}
+
+.block__img {
+	width: 100%;
+}
+
+.block__title {
+	margin: 0;
+}
+
+/*? PRODUCT PAGE */
+
+@media (min-width: 768px) {
+	.shirt {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.product-form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+}
+
+.product-form__input {
+	border: 1rem solid var(--darkPrimary);
+	background-color: transparent;
+	color: var(--white);
+	font-size: 2rem;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 1rem;
+	appearance: none;
+}
+
+.product-form__submit {
+	background-color: var(--secondary);
+	border: none;
+	font-size: 2rem;
+	font-family: var(--principalFont);
+	padding: 2rem;
+	transition: background-color 0.5s ease-in-out;
+	grid-column: 1/3;
+}
+
+.product-form__submit:hover {
+	cursor: pointer;
+	background-color: var(--darkSecondary);
 }
